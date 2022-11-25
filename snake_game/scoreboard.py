@@ -36,13 +36,13 @@ class Scoreboard(Turtle):
         self.print_score()
 
     def read_data_file(self):
-        with open("data.txt") as data:
+        with open("snake_game/data.txt") as data:
             content = data.read()
 
         high_score = int(content)
         return high_score
 
     def write_new_high_score(self, n_high_score):
-        with open("data.txt", "w") as data:
+        with open("snake_game/data.txt", "w") as data:
             str_high_score = str(n_high_score)
             data.write(str_high_score)
